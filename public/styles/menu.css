@@ -1,0 +1,203 @@
+:root{
+  --BG-COLOR: #121a1d;
+  --HI-COLOR: #1bc849;
+  --FS-COLOR: #FFF;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--BG-COLOR);
+  color: var(--FS-COLOR);
+}
+main{
+  display: flex;flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.menu-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #245c6b;
+  padding-inline: 24px;
+  padding-bottom: 10px;
+}
+.menu-title h1{
+  font-size: 20px;
+  border-bottom: 2px solid var(--HI-COLOR);
+  margin:10px;
+}
+.menu-title h2{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+#back-home{
+  position: absolute;
+  top: 10px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  display: inline;
+}
+#back-home a{
+  color: #121a1d;
+  text-decoration: none;
+  background-color: #1bc849;
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+  transition: all 0.5s linear;
+}
+#back-home a:hover{
+  background-color: #08e54a;
+}
+.card-container,.card-container2{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 12px;
+padding: 36px;
+}
+.card{
+  box-shadow: 0px 2px 6px #245c6b;
+  width:216px;
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+}
+.card img{
+  width: 184px;
+  height: 150px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  position: relative;
+  border: 1px solid #fff;
+}
+#item-name{
+  color: #1bc849;
+}
+#item-desc{
+  color: #d2cfcf;
+  font-size: 12px;
+}
+/* .item-info{
+  background-color: #121a1d;
+} */
+#new-price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ color: #1bc849;
+  padding: 6px 0px;
+  margin-top: 6px;
+}
+#old-price{
+  margin-top: 14px;
+  text-decoration: line-through;
+  color: #838383;
+}
+#add-cart{
+  margin-top: 14px;
+  background-color: #08e54a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  width: 100%;
+}
+#add-cart:hover{
+  background-color: #1bc849;
+  cursor: pointer;
+}
+#discount{
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #DEFFED;
+}
+.fa-heart{
+  position: absolute;
+  top: 6px;
+  color: gold;
+  right: 8px;
+}
+/********************* Slider style ****************/
+.card-container,.card-container2{
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+.card{
+  margin-top: 10px;
+  position: absolute;
+  transition: 0.8s;
+  top: 0;
+}
+#meat-title,#drink-title{
+text-align: center;
+font-size: 24px;
+margin-top: 10px;
+}
+#drink-title{
+  border-top:  1px dashed #245c6b;
+  width: 100%;
+  padding-top: 8px;
+}
+#next,#prev,#next2,#prev2{
+  position: absolute;
+  top: 40%;
+  color: #1bc849;
+  background-color: #fff;
+  font-size: medium;
+  padding: 5px;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#next,#next2{
+  left:unset;
+  right: 10px;
+}
+#next:hover,
+#prev:hover,
+#next2:hover,
+#prev2:hover{
+  background-color: #1bc849;
+  color: #121a1d;
+}
+
+/* ******** Keyframes responsive */
+@media (min-width:481px){
+  body{
+      padding-inline: 36px;
+  }
+  .card-container{
+    flex-direction: row;
+    gap: 36px;
+  }
+  .card{
+    width: 230px;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="../public/styles/contact.css">
+</head>
+<body>
+  <header>
+    <button id="back-home"><a href="index.html">Back</a></button>
+  </header>
+  <main>
+    <div class="cont-bg">
+    <img src="../public/images/chef.jpg" alt="Chef-leader">
+    </div>
+  <div class="center_form ">
+    <h1 id="form-title">Contact Us.</h1>
+    <div class="form_container" >
+    <form action="./index.html" method="GET">
+      <div class="form_item">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name " autofocus="on" 
+        required maxlength="24">
+        <!-- <i class='bx bxs-user'></i> -->
+      </div>
+      
+      <div class="form_item">
+        <label for="title">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email"
+         required >
+      </div>
+    
+      <div class="form_item message">
+        <textarea name="message" id="message" placeholder="Enter your comment here"  maxlength="200" minlength="" cols="25" rows="6"> 
+        </textarea>
+      </div>
+    
+      <div class="form_item button"> 
+        <button id="send" type="submit">Send</button>
+        <button id="reset" type="reset">Clear</button>
+      </div>
+    </form>
+    </div>
+    
+  </div>
+</main>
+
+  
+</body>
+</html>

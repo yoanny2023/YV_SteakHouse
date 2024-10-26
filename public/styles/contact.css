@@ -1,0 +1,200 @@
+:root{
+  --BG-COLOR: #121a1d;
+  --HI-COLOR: #1bc849;
+  --FS-COLOR: #FFF;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--BG-COLOR);
+  color: var(--FS-COLOR);
+  padding: 10px;
+  padding-inline: 36px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+}
+h1{
+  margin-bottom: 32px;
+  font-size:28px;
+ background: linear-gradient(90deg,#118430, #44e46e);
+ background-size: 200%;
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ animation: animate-gradient 10s ease-in-out infinite alternate;
+}
+#back-home{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  display: inline;
+}
+#back-home a{
+  color: #121a1d;
+  text-decoration: none;
+  background-color: #1bc849;
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+  transition: all 0.5s linear;
+}
+#back-home a:hover{
+  background-color: #08e54a;
+}
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* gap: 32px; */
+/*   border: 1px solid blue; */
+  /* min-height: 100vh; */
+}
+/* .form_container{
+  border: 1px solid blue;
+} */
+ .cont-bg{
+/*   border: 1px solid violet; */
+  position: relative;
+  top: 115px;
+  display: none;
+ }
+ .cont-bg img{
+  /* position: relative;
+  left: -30px; */
+  width: 250px;
+  box-shadow: 0px 2px 6px #20859a;
+ }
+ 
+.center_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ /*  border: 1px solid yellow; */
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  box-shadow: 0px 2px 6px #20859a;
+  background-color: var(--BG-COLOR);
+ /*  transform: perspective(800px) translateZ(100px); */
+}
+.form_item{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+ /*  border: 1px solid red; */
+
+ 
+}
+.form_item label{
+  width: 3.5rem;
+  color: white;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.form_item input{
+  padding: 10px;
+  border-radius: 8px; 
+  width: 100%;
+  outline: none;
+  border: none;
+ /*  border: 1px solid #1bc849; */
+  background-color: #555;
+  color: white;
+}
+.form_item input:hover{
+  border: 1px solid #1bc849;
+}
+
+#message{
+  background-color: beige;
+  outline: none;
+  padding: 5px;
+}
+.form_item button{
+  padding: 8px;
+  padding-inline: 25px;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.form_item button {
+width: 70px;
+display: flex;
+justify-content: center;
+}
+.form_item:last-child {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+button#send{
+  background-color: #08e54a; 
+  color: #121a1d;
+  transition:all 0.5s;
+}
+
+  button#send:hover{
+    background-color:#1bc849;
+    color: white;
+ 
+  }
+button#reset{
+  background-color: hsl(0, 0%, 50%);
+  border-radius: 10px;
+  transition: color 0.5s;
+}
+
+  #reset a{
+    text-decoration: none;
+    color: black;
+  }
+  #reset:hover{ 
+    color:white;
+  }
+
+  @keyframes animate-gradient{
+    to{
+      background-position: 200%;
+    }
+  }
+@media (min-width:481px){
+  form{
+    width: 300px;
+    /* background-color: pink; */
+  }
+  .form_item{
+    width: 80%;
+  }
+  .form_item label{
+    font-size: 16px;
+  }
+}
+@media (min-width:600px){
+  .cont-bg{
+    display: block;
+  }
+}
+@media (min-width:769px){
+  form{
+    width: 400px;
+   /*  background-color: purple; */
+  }
+}
